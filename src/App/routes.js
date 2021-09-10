@@ -1,13 +1,16 @@
+import React, { Suspense } from 'react';
+
+const Home = React.lazy(() => 
+    import ('./../pages/Home'));
+
 const routes = [
     {
         name: 'home',
         path: '/',
-        component: () => <h1>Home</h1>,
-        exact: true
-    },{
-        name: 'test',
-        path: '/test',
-        component: () => <h1>Test</h1>,
+        component: ()=>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Home/>
+            </Suspense>,
         exact: true
     }
 ];

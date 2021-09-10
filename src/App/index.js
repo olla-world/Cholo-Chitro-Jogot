@@ -4,7 +4,7 @@ import routes, { routePath } from './routes';
 
 const navLinks = [
     { 
-        text: 'Cholo-Chitro-Jogot', 
+        text: 'Cholo-Chitro Jogot', 
         href: routePath('home'), 
         type: 'brand',
     }

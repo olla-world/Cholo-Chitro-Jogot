@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavLink = ({ href, text, type, imgSrc }) => (
   <div>
-    <Link to={href}>{
+    <Link className="link" to={href}>{
         type==='brand' && imgSrc?
         <img 
             className="logo"

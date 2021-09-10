@@ -1,23 +1,58 @@
 .navbar{
-    background: red;
-
-    @include respond-to('sm-mobile') {
-        background: blue;
-    }
-
-    @include respond-to('mobile') {
-        background: green;
-    }
-
-    @include respond-to('tablet') {
-        background: black;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include respond-to('laptop'){
-        background: yellow;
+        justify-content: flex-start;    
     }
 
-    @include respond-to('desktop'){
-        background: yellowgreen;
+    width: 100%;
+    background: white;
+
+    position: fixed;
+    top:0px;
+    padding: 8px;
+    border-top: 4px solid green;
+
+    z-index: 10;
+
+    .logo{
+        width: 150px;
+        @include respond-to('laptop'){
+            width: 200px;
+        }
+        &--text{
+            padding: 0px;
+            font-size: 16px;
+            line-height: 18px;
+            color: green;
+            font-weight: 400;
+
+            @include respond-to('laptop'){
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+            }
+            
+            &:first-letter {
+                font-weight: 500;
+                font-size: 48px;
+                display: block;
+                float: left;
+                line-height: 0.5;
+                margin: 8px 4px 8px 0;
+
+                @include respond-to('laptop'){
+                    font-weight: 600;
+                    font-size: 64px;
+                    margin: 10px 8px 8px 0;
+                }
+            }
+        }
     }
+}
+
+.link{
+    text-decoration: none;
 }
