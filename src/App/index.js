@@ -1,10 +1,13 @@
+import Router from './components/Router';
+import routes from './routes';
+
 function App() {
     return (
-      <div className="App">
-       Hello
-      </div>
+        <div className="App">
+            <Router routes={routes} />
+        </div>
     );
-  }
+}
   
-  export default App;
+export default App;
   
