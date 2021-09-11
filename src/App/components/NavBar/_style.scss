@@ -3,6 +3,8 @@
     align-items: center;
     justify-content: center;
 
+    height: 50px;
+
     @include respond-to('laptop'){
         justify-content: flex-start;    
     }
@@ -13,42 +15,18 @@
     position: fixed;
     top:0px;
     padding: 8px;
-    border-top: 4px solid green;
+    border-bottom: 2px solid #E50914;
 
     z-index: 10;
 
     .logo{
-        width: 150px;
-        @include respond-to('laptop'){
-            width: 200px;
-        }
+        padding: 0 8px;
         &--text{
-            padding: 0px;
-            font-size: 16px;
-            line-height: 18px;
-            color: green;
-            font-weight: 400;
-
-            @include respond-to('laptop'){
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 24px;
-            }
-            
-            &:first-letter {
-                font-weight: 500;
-                font-size: 48px;
-                display: block;
-                float: left;
-                line-height: 0.5;
-                margin: 8px 4px 8px 0;
-
-                @include respond-to('laptop'){
-                    font-weight: 600;
-                    font-size: 64px;
-                    margin: 10px 8px 8px 0;
-                }
-            }
+            color: #E50914;
+           
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
         }
     }
 }

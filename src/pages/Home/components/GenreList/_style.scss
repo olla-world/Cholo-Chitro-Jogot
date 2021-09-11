@@ -1,0 +1,17 @@
+.list--genre{
+    display: flex;
+    background: #E50914;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

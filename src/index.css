@@ -11,8 +11,7 @@ code {
 }
 
 .container {
-  padding-top: 70px;
-  max-width: 1200px;
+  padding-top: 68px;
 }
 
 .navbar {
@@ -25,12 +24,13 @@ code {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 50px;
   width: 100%;
   background: white;
   position: fixed;
   top: 0px;
   padding: 8px;
-  border-top: 4px solid green;
+  border-bottom: 2px solid #E50914;
   z-index: 10;
 }
 
@@ -43,49 +43,58 @@ code {
 }
 
 .navbar .logo {
-  width: 150px;
-}
-
-@media (min-width: 980px) {
-  .navbar .logo {
-    width: 200px;
-  }
+  padding: 0 8px;
 }
 
 .navbar .logo--text {
-  padding: 0px;
-  font-size: 16px;
-  line-height: 18px;
-  color: green;
-  font-weight: 400;
-}
-
-@media (min-width: 980px) {
-  .navbar .logo--text {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
-
-.navbar .logo--text:first-letter {
+  color: #E50914;
   font-weight: 500;
-  font-size: 48px;
-  display: block;
-  float: left;
-  line-height: 0.5;
-  margin: 8px 4px 8px 0;
-}
-
-@media (min-width: 980px) {
-  .navbar .logo--text:first-letter {
-    font-weight: 600;
-    font-size: 64px;
-    margin: 10px 8px 8px 0;
-  }
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .link {
   text-decoration: none;
+}
+
+.list--genre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #E50914;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.list--genre::-webkit-scrollbar {
+  display: none;
+}
+
+.genre {
+  padding: 16px 16px 12px 16px;
+  margin-right: 8px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-bottom: 4px solid #e6491900;
+}
+
+.genre:hover {
+  border-bottom: 4px solid #9b2f0e;
+  background: #E64A19;
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */
