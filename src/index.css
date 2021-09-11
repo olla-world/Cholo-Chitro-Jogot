@@ -14,6 +14,17 @@ code {
   padding-top: 68px;
 }
 
+.wrap {
+  padding: 16px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  row-gap: 8px;
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,5 +107,13 @@ code {
   border-bottom: 4px solid #9b2f0e;
   background: #E64A19;
   cursor: pointer;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+.card img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=index.css.map */
