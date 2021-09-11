@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 
 export default function Card({class_name_mood='', poster=null}){
     return(
