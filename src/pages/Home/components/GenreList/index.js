@@ -7,7 +7,11 @@ export default function GenreList(props){
     return (
         <div className="list list--genre">{
             genres.map((genre)=>
-                <Genre key={genre.id} name={genre.name}/>
+                <Genre 
+                    key={genre.id} 
+                    id={genre.id} 
+                    name={genre.name}
+                />
         )}</div>
     )
 };

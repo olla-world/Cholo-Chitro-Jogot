@@ -3,6 +3,9 @@ import React, { Suspense } from 'react';
 const Home = React.lazy(() => 
     import ('./../pages/Home'));
 
+const GenreDetail = React.lazy(()=>
+    import ('./../pages/GenreDetail'))
+
 const routes = [
     {
         name: 'home',
@@ -10,6 +13,14 @@ const routes = [
         component: ()=>
             <Suspense fallback={<div>Loading...</div>}>
                 <Home/>
+            </Suspense>,
+        exact: true
+    },{
+        name: 'genre-detail',
+        path: '/genre/:genre_id',
+        component: ()=>
+            <Suspense fallback={<div>Loading...</div>}>
+                <GenreDetail/>
             </Suspense>,
         exact: true
     }

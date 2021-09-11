@@ -1,11 +1,15 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 export default function Genre(props){
-    const { name } = props;
+    const { id, name } = props;
 
     return(
-        <div className="genre">
+        <Link 
+            className="genre" 
+            to={`/genre/${id}`}
+        >
             {name}
-        </div>
+        </Link>
     )
 }
