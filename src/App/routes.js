@@ -6,6 +6,9 @@ const Home = React.lazy(() =>
 const GenreDetail = React.lazy(()=>
     import ('./../pages/GenreDetail'))
 
+const MovieDetail = React.lazy(()=>
+    import ('./../pages/MovieDetail'))
+
 const routes = [
     {
         name: 'home',
@@ -21,6 +24,14 @@ const routes = [
         component: ()=>
             <Suspense fallback={<div>Loading...</div>}>
                 <GenreDetail/>
+            </Suspense>,
+        exact: true
+    },{
+        name: 'movie-detail',
+        path: '/movies/:movie_id',
+        component: ()=>
+            <Suspense fallback={<div>Loading...</div>}>
+                <MovieDetail/>
             </Suspense>,
         exact: true
     }

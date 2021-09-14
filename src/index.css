@@ -109,6 +109,104 @@ code {
   cursor: pointer;
 }
 
+.info--movie {
+  min-height: calc(100vh - 100px);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info--movie .movie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info--movie .movie__info {
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.info--movie .movie__info__basic .name {
+  font-size: 32px;
+  line-height: 32px;
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+.info--movie .movie__info__basic .tagline {
+  color: red;
+  letter-spacing: 1.75px;
+}
+
+.info--movie .movie__info__basic .imdb-raitng {
+  margin: 16px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info--movie .movie__info__basic .imdb-raitng .tag {
+  color: gold;
+  margin-right: 16px;
+}
+
+.info--movie .movie__info__basic .imdb-raitng .vaue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  font-weight: 500;
+  height: 32px;
+  width: 32px;
+  border-radius: 48px;
+  background-color: gold;
+}
+
+.info--movie .movie__info__overview {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1.25px;
+  line-height: 26px;
+}
+
+.info--movie .movie__poster {
+  padding: 24px;
+}
+
 .card {
   border-radius: 8px;
 }

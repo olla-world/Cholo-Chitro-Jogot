@@ -1,0 +1,72 @@
+.info--movie{
+    min-height: calc(100vh - 100px);
+
+    background-color: rgba(0, 0, 0, .8);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-blend-mode: darken;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .movie{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+        &__info{
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            &__basic{
+                .name{
+                    font-size: 32px;
+                    line-height: 32px;
+                    color: white;
+                    letter-spacing: 1.5px;
+                }
+    
+                .tagline{
+                    color: red;
+                    letter-spacing: 1.75px;
+                }
+    
+                .imdb-raitng{
+                    margin: 16px 0px;
+                    display: flex;
+                    .tag{
+                        color: gold;
+                        margin-right: 16px;
+                    }
+                    .vaue{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: black;
+                        font-weight: 500;
+                        height: 32px;
+                        width: 32px;
+                        border-radius: 48px;
+                        background-color: gold;
+                    }
+                }
+            }
+            &__overview{
+                color: rgb(255, 255, 255);
+                font-size: 18px;
+                letter-spacing: 1.25px;
+                line-height: 26px;
+            }
+        }
+
+        &__poster{
+            padding: 24px;
+        }
+    }
+}

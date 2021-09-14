@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Card from "../../../core_components/Card";
 
@@ -8,11 +9,16 @@ export default function Posters(props){
     return(
         <div className="wrap wrap--poster">{
             movies.map(movie => 
-                <Card 
+                <Link 
                     key={movie.id}
-                    class_name_mood="poster"
-                    poster={movie.poster_path? movie.poster_path:null}
-                />
+                    className="movie" 
+                    to={`/movies/${movie.id}`}
+                >
+                    <Card 
+                        class_name_mood="poster"
+                        poster={movie.poster_path? movie.poster_path:null}
+                    />
+                </Link>
             )
         }</div>
     )
