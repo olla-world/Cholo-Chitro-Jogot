@@ -8,9 +8,9 @@ const GenreList = React.lazy(() =>
     
 export default function Home(){
     const {fetchGenres} = actions;
-    const {genres, loading} = useSelector((state)=>state.genres);
+    const {genres} = useSelector((state)=>state.genres);
+    
     const dispatch = useDispatch();
-
     useEffect(()=>{
         dispatch(
             fetchGenres()  

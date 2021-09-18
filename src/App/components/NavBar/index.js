@@ -17,18 +17,19 @@ const NavLink = ({ href, text, type, imgSrc }) => (
   </div>
 );
 
-const NavBar = ({ links }) => (
-    <div className="navbar">{
-        links.map(({ href, text, type, imgSrc }, i) => (
-            <NavLink 
-                key={i} 
-                href={href} 
-                text={text} 
-                type={type}
-                imgSrc={imgSrc}/>
+export default function NavBar({ links }){
+    return (
+        <div className="navbar">{
+            links.map(({ href, text, type, imgSrc }, i) => (
+                <NavLink 
+                    key={i} 
+                    href={href} 
+                    text={text} 
+                    type={type}
+                    imgSrc={imgSrc}/>
+                )
             )
-        )
-    }</div>
-);
-
-export default NavBar;
+        }
+        </div>
+    )
+};

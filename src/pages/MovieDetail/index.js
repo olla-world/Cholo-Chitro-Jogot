@@ -4,15 +4,14 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import actions from './actions';
 
-const MovieInfo = React.lazy(() => 
-    import ("./components/MovieInfo"));
+import MovieInfo from "./components/MovieInfo";
 
-export default function MovieDetail(props){
+export default function MovieDetail(){
     const { movie_id } = useParams();
     const { fetchMovieDetail } = actions;
-    const { movie_detail, loading } = useSelector((state)=>{console.log(state);return state.movie_detail});
+    const { movie_detail } = useSelector((state)=>state.movie_detail);
+    
     const dispatch = useDispatch();
-
     useEffect(()=>{
         dispatch(
             fetchMovieDetail(movie_id)  

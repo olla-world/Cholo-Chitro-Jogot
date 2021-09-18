@@ -2,17 +2,16 @@ import React, { Suspense, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
+import Posters from "./components/Posters";
+
 import actions from './actions';
 
-const Posters = React.lazy(() => 
-    import ("./components/Posters"));
-
-export default function GenreDetail(props){
+export default function GenreDetail(){
     const { genre_id } = useParams();
     const { fetchPopularMovies } = actions;
-    const { genre_popular_movies, loading } = useSelector((state)=>state.genre_popular_movies);
-    const dispatch = useDispatch();
+    const { genre_popular_movies } = useSelector((state)=>state.genre_popular_movies);
 
+    const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(
             fetchPopularMovies(genre_id)  

@@ -1,0 +1,24 @@
+.button{
+
+    &__body{
+        font-size: 24px;
+        color: white;
+        font-weight: 500;
+    }
+
+    &--wish{
+        padding: 8px 16px;
+        background: black;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20px;
+
+        border-radius: 0px 0px 8px 8px;
+        div{
+            font-size: 16px;
+            color: #c2970a;
+        };
+    }
+}

@@ -3,7 +3,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'IBM Plex Sans Arabic', sans-serif;
-  background: #fafafa;
+  background: white;
 }
 
 code {
@@ -25,6 +25,21 @@ code {
   row-gap: 8px;
 }
 
+.wrap--movie {
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,7 +56,7 @@ code {
   position: fixed;
   top: 0px;
   padding: 8px;
-  border-bottom: 2px solid #E50914;
+  border-bottom: 2px solid #c2970a;
   z-index: 10;
 }
 
@@ -58,7 +73,7 @@ code {
 }
 
 .navbar .logo--text {
-  color: #E50914;
+  color: #e02424;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -211,7 +226,40 @@ code {
   border-radius: 8px;
 }
 
-.card img {
+.card__body {
+  border-radius: 8px;
+}
+
+.card__body img {
+  border-radius: 8px 8px 0px 0px;
   max-width: 100%;
+}
+
+.button__body {
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+}
+
+.button--wish {
+  padding: 8px 16px;
+  background: black;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -20px;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.button--wish div {
+  font-size: 16px;
+  color: #c2970a;
 }
 /*# sourceMappingURL=index.css.map */

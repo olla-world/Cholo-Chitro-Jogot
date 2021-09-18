@@ -1,6 +1,11 @@
 .card{
     border-radius: 8px;
-    img{
-        max-width: 100%;
+
+    &__body{
+        border-radius: 8px;
+        img{
+            border-radius: 8px 8px 0px 0px;
+            max-width: 100%;
+        }
     }
 }
