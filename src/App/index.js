@@ -13,6 +13,10 @@ const navLinks = [
         text: 'Cholo-Chitro Jogot', 
         href: routePath('home'), 
         type: 'brand',
+    },{
+        text: 'Watch List', 
+        href: routePath('watch-list'), 
+        type: 'nav-menu',
     }
 ];
 

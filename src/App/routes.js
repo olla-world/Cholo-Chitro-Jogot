@@ -3,6 +3,7 @@ import React from 'react';
 import Home from '../pages/Home';
 import GenreDetail from '../pages/GenreDetail';
 import MovieDetail from '../pages/MovieDetail';
+import WatchList from '../pages/WatchList';
 
 const routes = [
     {
@@ -19,6 +20,11 @@ const routes = [
         name: 'movie-detail',
         path: '/movies/:movie_id',
         component: () => <MovieDetail/>,
+        exact: true
+    },{
+        name: 'watch-list',
+        path: '/watchlist',
+        component: () => <WatchList/>,
         exact: true
     }
 ];

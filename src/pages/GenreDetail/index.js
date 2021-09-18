@@ -31,6 +31,10 @@ export default function GenreDetail(){
                     )
                 }</div>
             </Suspense>
+
+            <div className="footer">
+
+            </div>
         </div>
     )
 }

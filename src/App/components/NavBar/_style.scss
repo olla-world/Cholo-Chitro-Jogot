@@ -14,19 +14,36 @@
 
     position: fixed;
     top:0px;
-    padding: 8px;
     border-bottom: 2px solid #c2970a;
 
     z-index: 10;
 
-    .logo{
-        padding: 0 8px;
-        &--text{
-            color: #e02424;
-           
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
+    .nav-menu{
+        padding: 0px 8px;
+        .logo{
+            padding: 8px;
+            &--text{
+                color: #e02424;
+               
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+
+        &__item{
+            border-radius: 4px;
+            background: #ffbd06;
+            padding: 8px 32px;
+            color: white;
+            font-weight: 700;
+            white-space: nowrap;
+
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+
+            box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.199);
         }
     }
 }

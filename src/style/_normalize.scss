@@ -12,21 +12,49 @@ code {
 }
 
 .container{
-    padding-top: 68px;
+    padding-top: 52px;
+    padding-bottom: 450px;
+    background: rgb(0, 0, 0);
+    min-height: 100vh;
+    .footer{
+        background-image: url('./assets/background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        min-height: 450px;
+        min-width: 100vw;
+
+        position: fixed;
+        bottom: 0px;
+
+        z-index: 0;
+        box-shadow: 0px 0px 50px 1px black inset;
+        filter: grayscale(80%);
+    }
 }
   
 
 .wrap{
-    padding: 16px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    column-gap: 16px;
-    row-gap: 8px;
-
+    z-index: 1;
     &--movie{
         padding: 0px;
         display: flex;
         flex-direction: column;
+    }
+
+    &--poster{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--posters{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        column-gap: 16px;
+        row-gap: 16px;
+
+        padding: 16px;
     }
 }
 

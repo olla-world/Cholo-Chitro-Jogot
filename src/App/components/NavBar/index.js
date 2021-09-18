@@ -2,15 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavLink = ({ href, text, type, imgSrc }) => (
-  <div>
+  <div className="nav-menu">
     <Link className="link" to={href}>{
-        type==='brand' && imgSrc?
-        <img 
-            className="logo"
-            src={imgSrc} 
-            alt="brand logo"
-        /> 
-        :<div className="logo logo--text"> 
+        type==='brand'?
+        <div className="logo logo--text">
+            {text}
+        </div>
+        :<div className="nav-menu__item"> 
             {text}
         </div>      
     }</Link>

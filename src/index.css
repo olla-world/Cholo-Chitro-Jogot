@@ -11,18 +11,30 @@ code {
 }
 
 .container {
-  padding-top: 68px;
+  padding-top: 52px;
+  padding-bottom: 450px;
+  background: black;
+  min-height: 100vh;
+}
+
+.container .footer {
+  background-image: url("./assets/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  min-width: 100vw;
+  position: fixed;
+  bottom: 0px;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 50px 1px black inset;
+          box-shadow: 0px 0px 50px 1px black inset;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
 }
 
 .wrap {
-  padding: 16px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  -webkit-column-gap: 16px;
-          column-gap: 16px;
-  row-gap: 8px;
+  z-index: 1;
 }
 
 .wrap--movie {
@@ -34,6 +46,27 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.wrap--poster {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap--posters {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  row-gap: 16px;
+  padding: 16px;
 }
 
 .link {
@@ -55,7 +88,6 @@ code {
   background: white;
   position: fixed;
   top: 0px;
-  padding: 8px;
   border-bottom: 2px solid #c2970a;
   z-index: 10;
 }
@@ -68,15 +100,33 @@ code {
   }
 }
 
-.navbar .logo {
-  padding: 0 8px;
+.navbar .nav-menu {
+  padding: 0px 8px;
 }
 
-.navbar .logo--text {
+.navbar .nav-menu .logo {
+  padding: 8px;
+}
+
+.navbar .nav-menu .logo--text {
   color: #e02424;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+}
+
+.navbar .nav-menu__item {
+  border-radius: 4px;
+  background: #ffbd06;
+  padding: 8px 32px;
+  color: white;
+  font-weight: 700;
+  white-space: nowrap;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  -webkit-box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.199);
+          box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.199);
 }
 
 .link {
@@ -156,7 +206,7 @@ code {
 }
 
 .info--movie .movie__info {
-  padding: 24px;
+  padding: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,7 +269,7 @@ code {
 }
 
 .info--movie .movie__poster {
-  padding: 24px;
+  padding: 16px;
 }
 
 .card {
