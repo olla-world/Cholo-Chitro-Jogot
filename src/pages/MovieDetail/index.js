@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import actions from './actions';
 
-import MovieInfo from "./components/MovieInfo";
+const MovieInfo = React.lazy(()=>
+    import ('./components/MovieInfo'))
 
 export default function MovieDetail(){
     const { movie_id } = useParams();
@@ -22,7 +23,7 @@ export default function MovieDetail(){
 
     return(
         <div className="container container--movie-detail">{
-            <Suspense fallback={<h1>Loading movies...</h1>}>
+            <Suspense fallback={<div>Loading...</div>}>
                 <MovieInfo {...movie_info} />
             </Suspense>
         }</div>

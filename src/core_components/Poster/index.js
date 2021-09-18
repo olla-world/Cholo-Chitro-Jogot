@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Card from "../../../../core_components/Card";
-import WishButton from "../../../../core_components/Button";
+import Card from "./../Card";
+import WishButton from "./../Button";
 
-import { getMovieStatus, updateMovies } from '../../../../service/wishMovieService';
+import { getMovieStatus, updateMovies } from './../../service/wishMovieService';
 
 export default function Poster(props){
     const { movie } = props;
@@ -17,7 +17,7 @@ export default function Poster(props){
         if(status === 'removed')setStatusWishButton(false);
         else setStatusWishButton(true);
     }
-    const posterOnloadAction = () => setDisplayWishButton(true);
+    const updateDisplayWishButton = () => setDisplayWishButton(true);
 
     return(
         <div className = "wrap wrap--poster">
@@ -28,7 +28,7 @@ export default function Poster(props){
                 <Card 
                     class_name_mod="poster"
                     poster={movie.poster_path? movie.poster_path:null}
-                    imageOnLoad={posterOnloadAction}
+                    afterImageLoadAction={updateDisplayWishButton}
                 />
             </Link>{
             display_wisth_button &&

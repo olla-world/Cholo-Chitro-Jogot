@@ -2,9 +2,10 @@ import React, { Suspense, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import Posters from "./components/Posters";
-
 import actions from './actions';
+
+const Poster = React.lazy(()=>
+    import ('./../../core_components/Poster'))
 
 export default function GenreDetail(){
     const { genre_id } = useParams();
@@ -19,10 +20,17 @@ export default function GenreDetail(){
     },[dispatch, fetchPopularMovies, genre_id])
 
     return(
-        <div className="container container--genre-detail">{
-            <Suspense fallback={<h1>Loading movies...</h1>}>
-                <Posters movies={genre_popular_movies}/>
+        <div className="container container--genre-detail">
+            <Suspense fallback={<div>Loading...</div>}>
+                <div className="wrap wrap--posters">{
+                    genre_popular_movies.map(movie => 
+                        <Poster
+                            key={movie.id}
+                            movie={movie}
+                        />
+                    )
+                }</div>
             </Suspense>
-        }</div>
+        </div>
     )
 }
