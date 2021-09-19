@@ -1,10 +1,13 @@
-import { all, takeLatest } from 'redux-saga/effects';
+import { all, takeLatest, takeEvery } from 'redux-saga/effects';
 
 import { types } from './actions';
-import { fetchGenres } from './queries';
+import { fetchGenres, fetchCommonMovies } from './queries';
 
 function* saga(){
-    yield all([takeLatest(types.GENRES_FETCH, fetchGenres)]);
+    yield all([
+        takeEvery(types.COMMON_MOVIES_FETCH, fetchCommonMovies),
+        takeLatest(types.GENRES_FETCH, fetchGenres),
+    ]);
 }
 
 export default saga;

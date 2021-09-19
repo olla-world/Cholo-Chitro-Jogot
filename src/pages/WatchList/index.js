@@ -19,9 +19,6 @@ export default function WatchList(){
                     )
                 :<></>}</div>
             </Suspense>
-            <div className="footer">
-
-            </div>
         </div>
     )
 }

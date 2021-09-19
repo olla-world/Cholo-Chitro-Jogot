@@ -13,24 +13,30 @@ code {
 .container {
   padding-top: 52px;
   padding-bottom: 450px;
-  background: black;
   min-height: 100vh;
 }
 
 .container .footer {
-  background-image: url("./assets/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   min-height: 450px;
   min-width: 100vw;
   position: fixed;
   bottom: 0px;
-  z-index: 0;
-  -webkit-box-shadow: 0px 0px 50px 1px black inset;
-          box-shadow: 0px 0px 50px 1px black inset;
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%);
+}
+
+.section {
+  min-height: 50vh;
+  margin-bottom: 16px;
+}
+
+.section__heading {
+  margin: 16px 16px 0 16px;
+  color: #0077ff;
+  font-size: 16px;
+  font-weight: 700;
+  z-index: 1;
+  border: 1px solid #0077ff;
+  border-radius: 4px;
+  padding: 8px 24px;
 }
 
 .wrap {
